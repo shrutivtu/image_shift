@@ -16,15 +16,12 @@ def shift_image(image, direction):
         shifted = scipy.ndimage.shift(image, [0, 1], cval=0)  # Shift right
     return shifted
 
-# Streamlit UI
 st.title("MNIST Image Shifter")
 
-# Upload an image
 st.write("Upload an MNIST image to shift:")
 
 uploaded_file = st.file_uploader("Choose an image", type=["png", "jpg", "jpeg"])
 if uploaded_file is not None:
-    # Convert the image to a numpy array (assuming it’s a 28x28 image)
     img = plt.imread(uploaded_file)
     if img.shape != (28, 28):
         img = img[:,:,0]  # Convert to grayscale if the image has 3 channels (RGB)
@@ -49,4 +46,3 @@ if uploaded_file is not None:
     for i, direction in enumerate(["up", "down", "left", "right"]):
         st.image(shifted_images[i], caption=f"Shifted {direction}", width=200)
 
-# Run the app using `streamlit run <your_script_name>.py` in the terminal
