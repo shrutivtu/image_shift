@@ -1,7 +1,3 @@
-Here's a sample **README** for your Streamlit MNIST Image Shifter project:
-
----
-
 # MNIST Image Shifter
 
 This Streamlit app allows users to upload an MNIST image and shift it in any direction (up, down, left, or right) by one pixel. The app provides the original image and displays all shifted versions of the image.
@@ -69,11 +65,3 @@ The app includes the following functionality:
 2. Select a shift direction (up, down, left, or right).
 3. View the shifted version of the image.
 4. Optionally, view all shifted versions (up, down, left, right).
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-You can use this README as the foundation for your Streamlit MNIST Image Shifter app!
